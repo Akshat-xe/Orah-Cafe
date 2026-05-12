@@ -1,50 +1,336 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orah Cafe — Bright Perth Café on Hay Street</title>
-    <meta
-      name="description"
-      content="Fresh coffee, honest food and a bright Perth café made for mornings, lunch breaks and easy catch-ups on Hay Street."
-    />
-    <meta property="og:title" content="Orah Cafe — Bright Perth Café on Hay Street" />
-    <meta
-      property="og:description"
-      content="Breakfast, brunch and lunch in Perth CBD. 4.9★ on Google. Dine-in and takeaway on Hay Street."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/png" href="/orahcafe/logo.png" />
-    <link rel="apple-touch-icon" href="/orahcafe/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
-    />
-    <script>
-      // GitHub Pages SPA redirect: restore the path from the query string
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orah Cafe — Bright Perth Cafe on Hay Street</title>
+  <meta name="description" content="Fresh coffee, honest food and a bright Perth cafe made for mornings, lunch breaks and easy catch-ups on Hay Street. Brunch all day, healthy bowls, gorgeous coffee right in the city." />
+  <meta name="author" content="Orah Cafe" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4a6635" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="canonical" href="https://orahcafe.shtar.space/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Orah Cafe - Bright Perth Cafe on Hay Street" />
+  <meta property="og:description" content="Breakfast, brunch and lunch in Perth CBD. 4.9 on Google. Dine-in and takeaway on Hay Street." />
+  <meta property="og:url" content="https://orahcafe.shtar.space/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.png" alt="Orah Cafe" />
+      Orah Cafe
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <a href="tel:+61412473286" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call us
+    </a>
+    <button id="nav-hamburger" class="nav-hamburger" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mob-backdrop" class="mob-backdrop"></div>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-menu-head">
+    <span class="nav-logo"><img src="assets/logo.png" alt="" />Orah Cafe</span>
+    <button id="mob-menu-close" class="mob-menu-close" aria-label="Close">x</button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="visit.html">Visit</a>
+  <a href="tel:+61412473286" class="mob-menu-cta">Call +61 412 473 286</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Hay Street, Perth CBD
+      </div>
+      <h1 class="hero-title">
+        Fresh coffee.<br>
+        <em>Honest</em> food.
+      </h1>
+      <p class="hero-lead">A bright Perth cafe made for mornings, lunch breaks and easy catch-ups. Brunch all day, healthy bowls, gorgeous coffee right in the city.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn-ink">View Menu <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a href="visit.html" class="btn-secondary">Visit Us</a>
+        <a href="https://www.instagram.com/orahcafe/" target="_blank" rel="noreferrer" class="btn-glass">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          Instagram
+        </a>
+        <a href="tel:+61412473286" class="btn-outline">Call now</a>
+      </div>
+      <div class="hero-chips">
+        <span class="hero-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.9 Google Rating</span>
+        <span class="hero-chip">Great Coffee</span>
+        <span class="hero-chip">Breakfast &amp; Lunch</span>
+        <span class="hero-chip">Perth CBD</span>
+      </div>
+    </div>
+    <div class="hero-img-col">
+      <div class="hero-slider slider-wrap" id="hero-slider">
+        <img src="assets/slide1.jpg" alt="Orah Cafe" loading="eager" />
+        <img src="assets/slide2.jpg" alt="Morning at Orah" loading="lazy" />
+        <img src="assets/slide3.jpg" alt="Cafe Moments" loading="lazy" />
+        <img src="assets/slide4.jpg" alt="Brunch Hour" loading="lazy" />
+        <div class="hero-slider-overlay"></div>
+      </div>
+      <div class="hero-float-card hero-float-rating">
+        <div class="hero-float-rating-inner">
+          <div class="hero-float-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <div class="hero-float-num">4.9</div>
+            <div class="hero-float-sub">440 Google reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-card hero-float-status">
+        <div class="hero-float-status-label">Open now</div>
+        <div class="hero-float-status-title">Coffee . Brunch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Specialty coffee</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Fresh &amp; healthy</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.08V8l-6-6H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h6"/><path d="M14 3v5h5"/></svg> All-day brunch</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg> Vegetarian options</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/></svg> Free Wi-Fi</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg> Outdoor seating</div>
+  </div>
+</section>
+
+<!-- Highlights -->
+<section class="highlights-section">
+  <div class="container">
+    <div class="highlights-head">
+      <div class="highlights-head-text">
+        <p class="section-eyebrow">Most loved at Orah</p>
+        <h2 class="section-title">The dishes locals reorder.</h2>
+        <p class="section-lead">A curated handful of the things people come back for - from our steak sandwich to the buddha bowl, with a long black on the side.</p>
+      </div>
+      <a href="menu.html" class="btn-secondary">See full menu <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+    <div class="highlights-grid">
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (32).png" alt="Eggs Benny Benny" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Most Loved</span></div><div class="highlight-body"><div><div class="highlight-name">Eggs Benny Benny</div><p class="highlight-blurb">Poached eggs, smoked salmon and silky hollandaise on toasted muffin.</p></div><span class="highlight-price">$19.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (16).png" alt="Orah Buddha Bowl" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> House Pick</span></div><div class="highlight-body"><div><div class="highlight-name">Orah Buddha Bowl</div><p class="highlight-blurb">Quinoa, roasted veg, avocado and tahini - fresh, whole, energising.</p></div><span class="highlight-price">$22.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (26).png" alt="Orah Steak Sandwich" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Cafe Favourite</span></div><div class="highlight-body"><div><div class="highlight-name">Orah's Steak Sandwich</div><p class="highlight-blurb">Grilled steak, caramelised onion and melted cheese on toasted ciabatta.</p></div><span class="highlight-price">$22.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (19).png" alt="Chicken Burger" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Popular</span></div><div class="highlight-body"><div><div class="highlight-name">Graceful Chicken Burger</div><p class="highlight-blurb">Crispy chicken, fresh greens and house aioli on a soft brioche bun.</p></div><span class="highlight-price">$19.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (3).png" alt="Avocado Bowl" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Brunch Favourite</span></div><div class="highlight-body"><div><div class="highlight-name">Very Much Avocado</div><p class="highlight-blurb">Smashed avo, feta and seeds on grainy sourdough.</p></div><span class="highlight-price">$19.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (4).png" alt="Long Black" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Coffee Essential</span></div><div class="highlight-body"><div><div class="highlight-name">Long Black</div><p class="highlight-blurb">Bold, smooth, full crema. The Perth morning starter.</p></div><span class="highlight-price">$4.10</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (35).png" alt="Lemon Chicken Salad" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Light &amp; Fresh</span></div><div class="highlight-body"><div><div class="highlight-name">Lemon Chicken Salad</div><p class="highlight-blurb">Grilled chicken on four grains with fresh greens and lemon.</p></div><span class="highlight-price">$22.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (30).png" alt="Orah Soup" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Comfort Bowl</span></div><div class="highlight-body"><div><div class="highlight-name">Orah's Soup</div><p class="highlight-blurb">Creamy potato and mushroom, served warm with Turkish bread.</p></div><span class="highlight-price">$16.00</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (44).png" alt="Bacon Egg Roll" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Quick Bite</span></div><div class="highlight-body"><div><div class="highlight-name">Bacon Egg Roll</div><p class="highlight-blurb">Streaky bacon, runny egg and melted cheese on a soft roll.</p></div><span class="highlight-price">$8.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (13).png" alt="Smoked Salmon" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Fresh Pick</span></div><div class="highlight-body"><div><div class="highlight-name">Smoked Salmon</div><p class="highlight-blurb">Pan-seared salmon on creamy mash with romesco and rocket.</p></div><span class="highlight-price">$24.90</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (20).png" alt="Chai Latte" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Cafe Favourite</span></div><div class="highlight-body"><div><div class="highlight-name">Chai Latte</div><p class="highlight-blurb">Spiced chai, steamed milk and a kiss of cinnamon.</p></div><span class="highlight-price">$5.50</span></div></article>
+      <article class="highlight-card reveal"><div class="highlight-img"><img src="assets/Pasted image (31).png" alt="Fresh Fruit Bowl" loading="lazy" /><span class="highlight-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg> Sweet &amp; Fresh</span></div><div class="highlight-body"><div><div class="highlight-name">Fresh Fruit Bowl</div><p class="highlight-blurb">Seasonal tropical fruits with chia seeds and a drizzle of honey.</p></div><span class="highlight-price">$9.90</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Why Locals -->
+<section class="why-section">
+  <div class="why-orb"></div>
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-img-col">
+        <div class="why-large-slider slider-wrap" id="why-large-slider">
+          <img src="assets/l1.jpg" alt="Orah Vibes" loading="lazy" />
+          <img src="assets/l2.jpg" alt="Cafe Corner" loading="lazy" />
+          <img src="assets/l3.jpg" alt="Perth Morning" loading="lazy" />
+          <img src="assets/l4.jpg" alt="Hay Street" loading="lazy" />
+        </div>
+        <div class="why-small-slider slider-wrap" id="why-small-slider">
+          <img src="assets/s1.jpg" alt="Little Details" loading="lazy" />
+          <img src="assets/s2.jpg" alt="Coffee Art" loading="lazy" />
+          <img src="assets/s3.jpg" alt="Fresh and Bright" loading="lazy" />
+          <img src="assets/s4.jpg" alt="Cafe Life" loading="lazy" />
+        </div>
+      </div>
+      <div>
+        <p class="section-eyebrow">Why locals love Orah</p>
+        <h2 class="section-title">The little Hay Street ritual.</h2>
+        <p class="section-lead">Tucked into the city, Orah is the kind of place where the office regulars know their order, students stay an extra hour, and a quick coffee turns into the best part of the day.</p>
+        <div class="reasons-grid">
+          <div class="reason-card reveal"><div class="reason-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h3 class="reason-title">Coffee worth the walk</h3><p class="reason-body">Specialty beans pulled by people who care. Smooth long blacks, silky flat whites, the lot.</p></div>
+          <div class="reason-card reveal"><div class="reason-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div><h3 class="reason-title">Fresh, fast, honest</h3><p class="reason-body">Buddha bowls, vibrant salads and warm grain bowls - quick lunch, no compromise.</p></div>
+          <div class="reason-card reveal"><div class="reason-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.08V8l-6-6H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h6"/><path d="M14 3v5h5"/></svg></div><h3 class="reason-title">Brunch all day</h3><p class="reason-body">Eggs Benny Benny, smashed avo, bacon rolls - whenever the craving hits.</p></div>
+          <div class="reason-card reveal"><div class="reason-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3 class="reason-title">A regular's welcome</h3><p class="reason-body">Friendly faces, easy mornings, and tables that feel like yours.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="testimonials-head">
+      <div>
+        <p class="section-eyebrow">What people say</p>
+        <h2 class="section-title">Loved by Perth.</h2>
+      </div>
+      <div class="rating-badge">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div><div class="rating-num">4.9</div><div class="rating-count">440 Google reviews</div></div>
+      </div>
+    </div>
+    <div class="testimonials-scroll">
+      <div class="testimonial-card"><p class="testimonial-quote">"Amazingly priced and incredibly tasty. Easily my favourite Hay Street stop."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop" alt="Maddie" loading="lazy" /><div><div class="testimonial-name">Maddie</div><div class="testimonial-designation">Regular</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"The salads are fresh, generous and full of flavour. Great spot for a working lunch."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="James" loading="lazy" /><div><div class="testimonial-name">James</div><div class="testimonial-designation">Local</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Friendly staff, lovely coffee, and a vibe that makes you want to stay all morning."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" alt="Aiko" loading="lazy" /><div><div class="testimonial-name">Aiko</div><div class="testimonial-designation">Visitor</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"A little hidden gem in the city. Quick service even on the busiest mornings."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=100&auto=format&fit=crop" alt="Priya" loading="lazy" /><div><div class="testimonial-name">Priya</div><div class="testimonial-designation">CBD Worker</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Best eggs benny in Perth, full stop. The hollandaise is absolutely silky."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Tom" loading="lazy" /><div><div class="testimonial-name">Tom</div><div class="testimonial-designation">Brunch Enthusiast</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Perfect study spot - good Wi-Fi, great chai latte, and they never rush you out."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=100&auto=format&fit=crop" alt="Sophie" loading="lazy" /><div><div class="testimonial-name">Sophie</div><div class="testimonial-designation">UWA Student</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"The Korean Bulgogi Pasta is absolutely unreal. My new Friday tradition."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Min" loading="lazy" /><div><div class="testimonial-name">Min</div><div class="testimonial-designation">Perth Local</div></div></div></div>
+      <div class="testimonial-card"><p class="testimonial-quote">"Popped in for a quick coffee and ended up staying two hours. No regrets at all."</p><div class="testimonial-foot"><img class="testimonial-avatar" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=100&auto=format&fit=crop" alt="Lucy" loading="lazy" /><div><div class="testimonial-name">Lucy</div><div class="testimonial-designation">City Explorer</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Times -->
+<section class="popular-times-section" id="popular-times">
+  <div class="container-sm">
+    <p class="section-eyebrow">Visit rhythm</p>
+    <h2 class="section-title">When Orah hums.</h2>
+    <p class="section-lead" style="max-width:36rem">A peek at how the cafe flows through the week - handy for picking the perfect coffee window or a quiet lunch table.</p>
+    <div class="pt-card reveal" style="margin-top:2.5rem">
+      <div class="pt-top-row">
+        <div class="pt-day-tabs">
+          <button class="pt-day-btn" data-day="MON">Mo</button>
+          <button class="pt-day-btn" data-day="TUE">Tu</button>
+          <button class="pt-day-btn" data-day="WED">We</button>
+          <button class="pt-day-btn" data-day="THU">Th</button>
+          <button class="pt-day-btn active" data-day="FRI">Fr</button>
+          <button class="pt-day-btn" data-day="SAT">Sa</button>
+          <button class="pt-day-btn" data-day="SUN">Su</button>
+        </div>
+        <div class="live-dot" id="pt-live-dot">
+          <span class="live-dot-ring"></span>
+          Live: less busy than usual
+        </div>
+      </div>
+      <div class="pt-chart-wrap">
+        <div class="pt-gridlines"><div class="pt-gridline"></div><div class="pt-gridline"></div><div class="pt-gridline"></div><div class="pt-gridline"></div></div>
+        <div class="pt-bars" id="pt-bars">
+          <div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div><div class="pt-bar" style="height:0%"></div>
+        </div>
+      </div>
+      <div class="pt-x-labels"><span>6a</span><span>9a</span><span>12p</span><span>3p</span><span>6p</span><span>9p</span></div>
+      <div class="pt-summary">
+        <div><div class="pt-summary-label">Day</div><div class="pt-summary-val" id="pt-day-label">Fri</div></div>
+        <div><div class="pt-summary-label">Peak</div><div class="pt-summary-val" id="pt-peak-label">10a-2p</div></div>
+        <div><div class="pt-summary-label">Vibe</div><div class="pt-summary-vibe" id="pt-vibe-label">Busiest day of the week</div></div>
+      </div>
+      <p class="pt-footer">People typically spend 20 min to 2 hr here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Visit section -->
+<section class="visit-section">
+  <div class="container">
+    <div class="visit-card">
+      <div class="visit-info">
+        <p class="section-eyebrow">Visit us</p>
+        <h2 class="section-title">Right on Hay Street.</h2>
+        <p class="section-lead">Easy to find, easy to settle in. Pop in for a quick takeaway coffee or stay a while.</p>
+        <div class="space-y-3" style="margin-top:2rem">
+          <a href="https://maps.app.goo.gl/Uib5mHdJRsC9WPJr7" target="_blank" rel="noreferrer" class="visit-info-item"><div class="visit-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="visit-info-title">Orah Cafe</div><div class="visit-info-sub">Suite 3, 459 Hay Street</div><div class="visit-info-sub">Perth WA 6000, Australia</div></div></a>
+          <a href="tel:+61412473286" class="visit-info-item"><div class="visit-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="visit-info-title">+61 412 473 286</div><div class="visit-info-sub">Tap to call</div></div></a>
+          <div class="visit-info-item" style="pointer-events:none"><div class="visit-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="visit-info-title">Open daily for breakfast &amp; lunch</div><div class="visit-info-sub">Coffee from early - pop in any time.</div></div></div>
+        </div>
+        <div class="visit-tags">
+          <span class="visit-tag">Dine-in</span><span class="visit-tag">Takeaway</span><span class="visit-tag">Free Wi-Fi</span><span class="visit-tag">Outdoor seating</span><span class="visit-tag">Vegetarian</span><span class="visit-tag">Vegan-friendly</span><span class="visit-tag">Plenty of parking</span>
+        </div>
+        <div class="visit-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Orah+Cafe+Suite+3%2F459+Hay+St+Perth+WA+6000" target="_blank" rel="noreferrer" class="btn-ink">Get directions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="menu.html" class="btn-secondary">View menu</a>
+          <a href="visit.html#amenities" class="btn-outline">See all amenities</a>
+        </div>
+      </div>
+      <div class="visit-map">
+        <iframe title="Orah Cafe location" src="https://www.google.com/maps?q=Orah+Cafe,Suite+3%2F459+Hay+St,Perth+WA+6000&t=k&z=18&output=embed" loading="eager" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <a href="https://maps.app.goo.gl/Uib5mHdJRsC9WPJr7" target="_blank" rel="noreferrer" class="visit-map-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-orb"></div>
+  <div class="container-sm">
+    <p class="section-eyebrow">FAQ</p>
+    <h2 class="section-title">Good things to know.</h2>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Do you offer dine-in and takeaway?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes - both. Settle in at a table, or grab your coffee and food to go.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Do you have vegetarian and vegan-friendly options?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Plenty. From the Orah Buddha Bowl to Very Much Avocado, Mushroom World War and Nudely Noodle, there's lots to love.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Do you serve breakfast and lunch?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">All day, every day. Brunch classics in the morning and hearty lunches through to early afternoon.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Is Orah good for coffee and a quick work session?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. Free Wi-Fi, friendly staff and a calm city vibe make it easy to get an hour in.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Where exactly are you in Perth CBD?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Suite 3/459 Hay Street, right in the heart of the city.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Do you have outdoor seating?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes - perfect for a sunny morning long black.</div></div></div>
+      <div class="faq-item"><button class="faq-btn"><span class="faq-question">Can I get a quick takeaway coffee?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Of course. Most coffees are ready in just a few minutes.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Orah Cafe" /> Orah Cafe</a>
+        <p class="footer-tagline">A bright Perth cafe on Hay Street. Fresh coffee, honest food, all-day brunch in the heart of the CBD.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/orahcafe/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/Orahcafe/" target="_blank" rel="noreferrer" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><div class="footer-col-title">Pages</div><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a href="visit.html">Visit</a></div>
+      <div class="footer-col"><div class="footer-col-title">Visit</div><a href="visit.html#amenities">Amenities</a><a href="https://maps.app.goo.gl/Uib5mHdJRsC9WPJr7" target="_blank" rel="noreferrer">Google Maps</a><a href="https://www.google.com/maps/dir/?api=1&destination=Orah+Cafe+Suite+3%2F459+Hay+St+Perth+WA+6000" target="_blank" rel="noreferrer">Directions</a></div>
+      <div class="footer-col"><div class="footer-col-title">Contact</div><a href="tel:+61412473286">+61 412 473 286</a><a href="https://www.instagram.com/orahcafe/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/Orahcafe/" target="_blank" rel="noreferrer">Facebook</a></div>
+    </div>
+    <div class="footer-bottom"><span>Suite 3/459 Hay St, Perth WA 6000</span><span>2025 Orah Cafe. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>

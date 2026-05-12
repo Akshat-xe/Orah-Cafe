@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Orah Cafe Perth | Breakfast, Lunch, Coffee</title>
+  <meta name="description" content="Browse the full Orah Cafe menu - eggs benny, buddha bowls, burgers, pasta, fresh salads, smoothies, specialty coffee and more. Perth CBD on Hay Street." />
+  <meta name="theme-color" content="#4a6635" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="canonical" href="https://orahcafe.shtar.space/menu.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Orah Cafe" />Orah Cafe</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="visit.html">Visit</a></li>
+    </ul>
+    <a href="tel:+61412473286" class="nav-cta">Call us</a>
+    <button id="nav-hamburger" class="nav-hamburger" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<div id="mob-backdrop" class="mob-backdrop"></div>
+<div id="mob-menu" class="mob-menu">
+  <div class="mob-menu-head"><span class="nav-logo"><img src="assets/logo.png" alt="" />Orah Cafe</span><button id="mob-menu-close" class="mob-menu-close">x</button></div>
+  <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a href="visit.html">Visit</a>
+  <a href="tel:+61412473286" class="mob-menu-cta">Call +61 412 473 286</a>
+</div>
+
+<!-- Header -->
+<section class="menu-header-section">
+  <div class="menu-header-inner">
+    <p class="section-eyebrow">The menu</p>
+    <h1 class="section-title" style="font-size:clamp(2rem,6vw,3.75rem)">Made fresh, served simply.</h1>
+    <p class="section-lead" style="max-width:36rem">Brunch favourites, healthy bowls, comforting mains, and the kind of coffee that makes you slow down. Prices in AUD.</p>
+  </div>
+</section>
+
+<!-- Mobile category nav -->
+<div class="menu-mob-nav" id="menu-mob-nav">
+  <button class="menu-mob-toggle">
+    <div>
+      <span class="menu-mob-browsing">Browsing:</span>
+      <span class="menu-mob-active">Special Combos</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.375rem">
+      <span class="menu-mob-all">All categories</span>
+      <svg class="menu-mob-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </button>
+  <div class="menu-mob-dropdown">
+    <div class="menu-mob-cols">
+      <div class="menu-mob-col">
+        <div class="menu-mob-col-label">Food</div>
+        <button class="menu-mob-link active" data-cat="special-combos">Special Combos</button>
+        <button class="menu-mob-link" data-cat="all-day-breakfast-lunch">All-Day Breakfast</button>
+      </div>
+      <div class="menu-mob-col">
+        <div class="menu-mob-col-label">Drinks</div>
+        <button class="menu-mob-link" data-cat="coffee">Coffee</button>
+        <button class="menu-mob-link" data-cat="orah-tea">Orah Tea</button>
+        <button class="menu-mob-link" data-cat="smoothies">Smoothies</button>
+        <button class="menu-mob-link" data-cat="milkshakes">Milkshakes</button>
+        <button class="menu-mob-link" data-cat="other-drinks">Other Drinks</button>
+        <button class="menu-mob-link" data-cat="bakery">Bakery</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Layout -->
+<div class="menu-page-layout">
+
+  <!-- Sidebar -->
+  <aside class="menu-sidebar">
+    <div class="menu-sidebar-inner">
+      <div class="menu-sidebar-group">
+        <div class="menu-sidebar-label">Food</div>
+        <a href="#special-combos" class="menu-sidebar-link active">Special Combos</a>
+        <a href="#all-day-breakfast-lunch" class="menu-sidebar-link">All-Day Breakfast &amp; Lunch</a>
+      </div>
+      <div class="menu-sidebar-group">
+        <div class="menu-sidebar-label">Drinks</div>
+        <a href="#coffee" class="menu-sidebar-link">Coffee</a>
+        <a href="#orah-tea" class="menu-sidebar-link">Orah Tea</a>
+        <a href="#smoothies" class="menu-sidebar-link">Smoothies</a>
+        <a href="#milkshakes" class="menu-sidebar-link">Milkshakes</a>
+        <a href="#other-drinks" class="menu-sidebar-link">Other Drinks</a>
+        <a href="#bakery" class="menu-sidebar-link">Bakery</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <div class="menu-content">
+    <div class="menu-divider"><span class="menu-divider-line"></span><span class="menu-divider-label">Food</span><span class="menu-divider-line"></span></div>
+
+    <div class="cat-block" id="special-combos">
+      <div class="cat-title-row"><h2 class="cat-title">Special Combos</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Bacon Egg Roll</span></div><p class="menu-item-desc">Served with a small coffee or tea.</p></div><div class="menu-item-right"><span class="menu-item-ask">ask staff</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Egg Vege Wrap</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-desc">Served with a small coffee or tea.</p></div><div class="menu-item-right"><span class="menu-item-ask">ask staff</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Gnocchi Bowl</span><span class="diet-badge diet-v">V</span></div></div><div class="menu-item-right"><span class="menu-item-price">$20.00</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="all-day-breakfast-lunch">
+      <div class="cat-title-row"><h2 class="cat-title">All-Day Breakfast &amp; Lunch</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Eggs Benny Benny</span></div><p class="menu-item-desc">Poached eggs and silky hollandaise on toasted muffin.</p><p class="menu-item-add">+bacon $5 +smoked salmon $6</p></div><div class="menu-item-right"><span class="menu-item-price">$19.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Very Much Avocado</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-desc">Smashed avo, feta, seeds, sourdough.</p><p class="menu-item-add">+eggs $4</p></div><div class="menu-item-right"><span class="menu-item-price">$19.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Mushroom World War</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-desc">Wild mushrooms, garlic cream, sourdough.</p><p class="menu-item-add">+eggs $4</p></div><div class="menu-item-right"><span class="menu-item-price">$19.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Cheese Mania Burger</span></div><p class="menu-item-desc">Beef patty, triple cheese, brioche.</p><p class="menu-item-add">+herby chips $3</p></div><div class="menu-item-right"><span class="menu-item-price">$19.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Graceful Chicken Burger</span></div><p class="menu-item-desc">Crispy chicken, greens, house aioli.</p><p class="menu-item-add">+herby chips $3</p></div><div class="menu-item-right"><span class="menu-item-price">$19.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Orah's Steak Sandwich</span></div><p class="menu-item-desc">Grilled steak, caramelised onion, cheese, ciabatta.</p><p class="menu-item-add">+herby chips $3</p></div><div class="menu-item-right"><span class="menu-item-price">$22.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Hardwood Smoked Ham Sandwich</span></div><p class="menu-item-desc">Smoked ham, mustard, pickles.</p><p class="menu-item-add">+herby chips $3</p></div><div class="menu-item-right"><span class="menu-item-price">$15.00</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">I Love B.T.S</span></div><p class="menu-item-desc">Bacon, tomato, spinach - Orah style.</p><p class="menu-item-add">+herby chips $3</p></div><div class="menu-item-right"><span class="menu-item-price">$20.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Lemon Chicken Salad with 4 Grains</span></div></div><div class="menu-item-right"><span class="menu-item-price">$22.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Orah Buddha Bowl</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-desc">Quinoa, roasted veg, avocado, tahini.</p><p class="menu-item-add">+chicken $4</p></div><div class="menu-item-right"><span class="menu-item-price">$22.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Pesto Chicken &amp; 5 Nuts Salad</span><span class="diet-badge diet-gf">GF</span></div></div><div class="menu-item-right"><span class="menu-item-price">$21.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Swimming Chicken Salad Bowl</span><span class="diet-badge diet-gf">GF</span></div></div><div class="menu-item-right"><span class="menu-item-price">$21.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Chicken in the Mash</span></div><p class="menu-item-desc">Mushroom gravy, rocket, creamy mash.</p></div><div class="menu-item-right"><span class="menu-item-price">$21.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Orah Pasta</span></div><p class="menu-item-desc">Chicken, bacon and mixed mushroom.</p></div><div class="menu-item-right"><span class="menu-item-price">$23.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Creamy Korean Bulgogi Pasta</span></div><p class="menu-item-desc">Bulgogi with creamy mushroom sauce.</p></div><div class="menu-item-right"><span class="menu-item-price">$22.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Korean Beef Bulgogi Rice</span></div><p class="menu-item-desc">Soy-marinated beef with mushroom.</p></div><div class="menu-item-right"><span class="menu-item-price">$20.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Orah's Parmy</span></div><p class="menu-item-desc">House parmy, Swiss cheese, mushroom gravy, slaw, chips.</p></div><div class="menu-item-right"><span class="menu-item-price">$24.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Chorizo Pasta</span></div><p class="menu-item-desc">Chorizo, mushroom, sundried tomato, olive, rocket.</p></div><div class="menu-item-right"><span class="menu-item-price">$22.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Salmon is the Best</span><span class="diet-badge diet-gf">GF</span></div><p class="menu-item-desc">Mash and romesco.</p></div><div class="menu-item-right"><span class="menu-item-price">$24.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Knock-Out Gnocchi Bowl</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-add">+chicken $4</p></div><div class="menu-item-right"><span class="menu-item-price">$21.90</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Grilled Lemon Chicken Salad</span></div></div><div class="menu-item-right"><span class="menu-item-price">$21.00</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Orah's Soup</span></div><p class="menu-item-desc">Creamy potato and mushroom, Turkish-style.</p><p class="menu-item-add">+chicken $4</p></div><div class="menu-item-right"><span class="menu-item-price">$16.00</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Curry Special</span></div><p class="menu-item-desc">Chicken tikka masala.</p></div><div class="menu-item-right"><span class="menu-item-price">$22.00</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Pork Belly Dance with Chillies</span></div></div><div class="menu-item-right"><span class="menu-item-price">$21.00</span></div></div></div>
+        <div class="menu-item-card reveal"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Nudely Noodle</span><span class="diet-badge diet-gf">GF</span><span class="diet-badge diet-v">V</span></div><p class="menu-item-desc">Sweet potato noodle, mushroom, carrot, onion, spinach, garlic.</p></div><div class="menu-item-right"><span class="menu-item-ask">ask staff</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="menu-divider mt"><span class="menu-divider-line"></span><span class="menu-divider-label">Drinks</span><span class="menu-divider-line"></span></div>
+
+    <div class="cat-block" id="coffee">
+      <div class="cat-title-row"><h2 class="cat-title">Coffee</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Espresso</span></div></div><div class="menu-item-right"><span class="menu-item-price">$3.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Long Black</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.10</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Flat White</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.30</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Latte</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.30</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Cappuccino</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.30</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Mocha</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.90</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Piccolo</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.30</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Short Mac</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.30</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Long Mac</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.90</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><div class="menu-item-name-row"><span class="menu-item-name">Affogato</span></div></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="orah-tea">
+      <div class="cat-title-row"><h2 class="cat-title">Orah Tea</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Yuzu (Citron) Tea</span></div><div class="menu-item-right"><span class="menu-item-price">$4.90</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Lemon Ginger &amp; Honey Tea</span></div><div class="menu-item-right"><span class="menu-item-price">$4.90</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">English Breakfast Tea</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Earl Grey</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Hibiscus</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Chamomile</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Peppermint</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Rooibos</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Green Sencha</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="smoothies">
+      <div class="cat-title-row"><h2 class="cat-title">Smoothies</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Mango</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Blueberry</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Banana</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Strawberry</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Passionfruit</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Any Mixed of 2</span></div><div class="menu-item-right"><span class="menu-item-price">$9.00</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="milkshakes">
+      <div class="cat-title-row"><h2 class="cat-title">Milkshakes</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Caramel</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Chocolate</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Banana</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Vanilla</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Strawberry</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Any Mixed of 2</span></div><div class="menu-item-right"><span class="menu-item-price">$8.00</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="other-drinks">
+      <div class="cat-title-row"><h2 class="cat-title">Other Drinks</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Strawberry Matcha Iced</span></div><div class="menu-item-right"><span class="menu-item-price">$6.90</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Fresh Watermelon Juice</span></div><div class="menu-item-right"><span class="menu-item-price">$7.00</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Fruit Smoothie (any 2 mixed)</span></div><div class="menu-item-right"><span class="menu-item-price">$8.50</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="cat-block" id="bakery">
+      <div class="cat-title-row"><h2 class="cat-title">Bakery</h2></div>
+      <div class="menu-items-grid">
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Blueberry Muffin</span></div><div class="menu-item-right"><span class="menu-item-price">$5.70</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Chocolate Muffin</span></div><div class="menu-item-right"><span class="menu-item-price">$5.70</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Butter Muffin</span></div><div class="menu-item-right"><span class="menu-item-price">$5.70</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Chocolate Croissant</span></div><div class="menu-item-right"><span class="menu-item-price">$6.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Melting Moment</span></div><div class="menu-item-right"><span class="menu-item-price">$8.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Protein Oat Bar</span></div><div class="menu-item-right"><span class="menu-item-price">$4.50</span></div></div></div>
+        <div class="menu-item-card"><div class="menu-item-row"><div class="menu-item-left"><span class="menu-item-name">Chocochip with Macadamia</span></div><div class="menu-item-right"><span class="menu-item-price">$6.00</span></div></div></div>
+      </div>
+    </div>
+
+    <div class="menu-cta">
+      <h3>Hungry yet?</h3>
+      <p>Pop in for a coffee, brunch or a quick lunch break.</p>
+      <a href="visit.html" class="btn-ink">Visit us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Orah Cafe" /> Orah Cafe</a><p class="footer-tagline">A bright Perth cafe on Hay Street. Fresh coffee, honest food, all-day brunch.</p><div class="footer-social"><a href="https://www.instagram.com/orahcafe/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></div></div>
+      <div class="footer-col"><div class="footer-col-title">Pages</div><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a><a href="visit.html">Visit</a></div>
+      <div class="footer-col"><div class="footer-col-title">Contact</div><a href="tel:+61412473286">+61 412 473 286</a><a href="https://www.instagram.com/orahcafe/" target="_blank" rel="noreferrer">Instagram</a></div>
+    </div>
+    <div class="footer-bottom"><span>Suite 3/459 Hay St, Perth WA 6000</span><span>2025 Orah Cafe.</span></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
