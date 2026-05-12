@@ -215,3 +215,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initSlider('why-large-slider', 2200);
   initSlider('why-small-slider', 2200);
 });
+
+// Patch 2.0.0
