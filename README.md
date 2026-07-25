@@ -55,3 +55,7 @@ img { height: auto; max-width: 100%; }
 
 /* Rate Limit Handling */
 const RETRY_DELAY_MS = 2000;
+
+
+/* Event Throttling */
+const throttledScroll = throttle(onScroll, 100);
