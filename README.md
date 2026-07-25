@@ -35,3 +35,7 @@ The digital home of Orah Cafe — a warm, welcoming coffee destination in Perth,
 
 ## Rate Limiting
 - Public endpoints restricted to 100 requests per minute per IP.
+
+
+## Offline Support
+- Service worker caches core shell assets for offline access.
