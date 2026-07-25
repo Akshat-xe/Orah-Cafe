@@ -27,3 +27,7 @@ The digital home of Orah Cafe — a warm, welcoming coffee destination in Perth,
 *Come for the coffee. Stay for the vibe.*
 
 <!-- Patch 2.0.0 -->
+
+
+## Cache Policy
+- Static assets cached with long-lived max-age headers.
