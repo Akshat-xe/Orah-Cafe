@@ -67,3 +67,7 @@ const MAX_TOASTS = 3;
 
 /* Listener Cleanup */
 // Remove window event listeners on unmount
+
+
+/* Clean CSS */
+// Standard CSS flexbox properties without prefixes
