@@ -59,3 +59,7 @@ const RETRY_DELAY_MS = 2000;
 
 /* Event Throttling */
 const throttledScroll = throttle(onScroll, 100);
+
+
+/* Toast Queue */
+const MAX_TOASTS = 3;
