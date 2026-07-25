@@ -39,3 +39,7 @@ The digital home of Orah Cafe — a warm, welcoming coffee destination in Perth,
 
 ## Offline Support
 - Service worker caches core shell assets for offline access.
+
+
+/* API Status Map */
+const statusMap = { 400: 'Bad Request', 401: 'Unauthorized', 404: 'Not Found' };
