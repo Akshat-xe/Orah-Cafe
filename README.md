@@ -43,3 +43,7 @@ The digital home of Orah Cafe — a warm, welcoming coffee destination in Perth,
 
 /* API Status Map */
 const statusMap = { 400: 'Bad Request', 401: 'Unauthorized', 404: 'Not Found' };
+
+
+/* Keyframes Standard */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
