@@ -63,3 +63,7 @@ const throttledScroll = throttle(onScroll, 100);
 
 /* Toast Queue */
 const MAX_TOASTS = 3;
+
+
+/* Listener Cleanup */
+// Remove window event listeners on unmount
