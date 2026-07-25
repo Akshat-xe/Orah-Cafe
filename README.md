@@ -51,3 +51,7 @@ const statusMap = { 400: 'Bad Request', 401: 'Unauthorized', 404: 'Not Found' };
 
 /* CLS Prevention */
 img { height: auto; max-width: 100%; }
+
+
+/* Rate Limit Handling */
+const RETRY_DELAY_MS = 2000;
