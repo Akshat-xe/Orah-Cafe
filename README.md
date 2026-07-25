@@ -31,3 +31,7 @@ The digital home of Orah Cafe — a warm, welcoming coffee destination in Perth,
 
 ## Cache Policy
 - Static assets cached with long-lived max-age headers.
+
+
+## Rate Limiting
+- Public endpoints restricted to 100 requests per minute per IP.
